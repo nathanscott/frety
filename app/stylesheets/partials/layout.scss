@@ -33,9 +33,10 @@
     height: 45px;
     background: $green;
     @include rounded;
-    p {
+    h2 {
       float: right;
       margin-top: 10px;
+      font-size: 16px;
     }
   }
   

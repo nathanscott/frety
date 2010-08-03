@@ -1,7 +1,9 @@
 !!!
 %head
   %title
-    Frety
+    Frety - A simple tool for sharing your guitar chords
+  %meta(name="Keywords" content="guitar, chords, online, easy, mapping, share, sharing, <%= @page_keywords %>")
+  %meta(name="Description" content="Frety is an easy way to share guitar chords with friends. Simple map out your chord, hit save and send the url to whoever.")
   = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
   = stylesheet_link_tag 'print.css', :media => 'print'
   /[if IE]
@@ -12,7 +14,7 @@
   #header
     %h1#logo
       = link_to "Frety", root_path
-    %p
+    %h2
       A simple tool for sharing your guitar chords
   #container
     = yield
