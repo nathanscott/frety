@@ -3,7 +3,7 @@
   body {
     margin: 20px auto;
     width: 660px;
-    font: 13px/15px Helvetica, Arial, sans-serif;
+    font: 14px/15px Helvetica, Arial, sans-serif;
   }
   
   h1 {
@@ -47,8 +47,8 @@
             > li {
               input.fret {
                 position: absolute;
-                top: -9px;
-                left: -30px;
+                top: -7px;
+                left: -29px;
                 opacity: 0.3;
                 &:checked, &:hover {
                   opacity: 1;                  
