@@ -1,6 +1,8 @@
 Frety::Application.routes.draw do |map|
+
   resources :chords
 
+  match '/:id' => 'chords#show'
   root :to => "chords#new"
 
   # The priority is based upon order of creation:

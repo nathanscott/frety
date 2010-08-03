@@ -9,7 +9,7 @@ class ChordsController < ApplicationController
   # GET /chords/1
   # GET /chords/1.xml
   def show
-    @chord = Chord.find(params[:id])
+    @chord = Chord.find_by_hash_ref(params[:id]) or raise ActiveRecord::RecordNotFound
 
     respond_to do |format|
       format.html # show.html.erb
@@ -38,7 +38,7 @@ class ChordsController < ApplicationController
 
     respond_to do |format|
       if @chord.save
-        format.html { redirect_to(@chord, :notice => 'Chord was successfully created.') }
+        format.html { redirect_to(chord_path(@chord.hash_ref), :notice => 'Chord was successfully created.') }
         format.xml  { render :xml => @chord, :status => :created, :location => @chord }
       else
         format.html { render :action => "new" }

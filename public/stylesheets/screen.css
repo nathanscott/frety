@@ -182,7 +182,7 @@ h2 {
   display: block;
   position: absolute;
   left: -29px;
-  top: -4px;
+  top: -5px;
   font-size: 50px;
 }
 /* line 104, ../../app/stylesheets/partials/layout.scss */
@@ -191,7 +191,7 @@ h2 {
 }
 /* line 109, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string ol.frets > li:first-child ul li span.finger {
-  top: -6px;
+  top: -5px;
   left: -8px;
 }
 /* line 113, ../../app/stylesheets/partials/layout.scss */
