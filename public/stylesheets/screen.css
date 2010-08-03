@@ -62,47 +62,96 @@ a img {
   border: none;
 }
 
-/* line 3, ../../app/stylesheets/partials/layout.scss */
+/* line 2, ../../app/stylesheets/partials/layout.scss */
+html {
+  background: #b8dc96;
+}
+
+/* line 5, ../../app/stylesheets/partials/layout.scss */
 body {
   margin: 20px auto;
   width: 660px;
-  font: 14px/15px Helvetica, Arial, sans-serif;
+  padding: 10px;
+  -moz-border-radius: 16px;
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  font: 14px/16px Helvetica, Arial, sans-serif;
 }
 
-/* line 10, ../../app/stylesheets/partials/layout.scss */
-h1#logo {
-  display: block;
-  padding: 10px 6px;
-  background: #ccc;
-}
 /* line 14, ../../app/stylesheets/partials/layout.scss */
+h1#logo {
+  float: left;
+}
+/* line 16, ../../app/stylesheets/partials/layout.scss */
 h1#logo a {
-  color: white;
+  padding: 10px 0;
+  color: #f4faef;
   text-decoration: none;
-  font: 26px/28px Georgia, serif;
+  font: 34px/38px Georgia, serif;
+  text-shadow: 2px 2px 0 #38561d;
 }
 
-/* line 22, ../../app/stylesheets/partials/layout.scss */
+/* line 26, ../../app/stylesheets/partials/layout.scss */
 h2 {
   font-size: 1.6em;
 }
 
-/* line 26, ../../app/stylesheets/partials/layout.scss */
-#container {
-  padding: 20px 0;
+/* line 30, ../../app/stylesheets/partials/layout.scss */
+#header {
+  display: block;
+  padding: 10px 20px;
+  height: 45px;
+  background: #629632;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/* line 36, ../../app/stylesheets/partials/layout.scss */
+#header p {
+  float: right;
+  margin-top: 10px;
 }
 
-/* line 30, ../../app/stylesheets/partials/layout.scss */
+/* line 42, ../../app/stylesheets/partials/layout.scss */
+#container {
+  padding: 20px;
+}
+
+/* line 46, ../../app/stylesheets/partials/layout.scss */
+.button, .make_one, form.formtastic fieldset > ol > li.commit input[type='submit'], form.formtastic fieldset .tbody > ol > li.commit input[type='submit'] {
+  padding: 5px 10px;
+  background: #629632;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 0 1px 0 #38561d;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+/* line 55, ../../app/stylesheets/partials/layout.scss */
+.button:hover, .make_one:hover, form.formtastic fieldset > ol > li.commit input[type='submit']:hover, form.formtastic fieldset .tbody > ol > li.commit input[type='submit']:hover {
+  background: #38561d;
+}
+
+/* line 60, ../../app/stylesheets/partials/layout.scss */
+.make_one {
+  display: inline-block;
+  float: right;
+}
+
+/* line 66, ../../app/stylesheets/partials/layout.scss */
 #fretboard {
   margin: 40px 0;
-  padding-left: 60px;
+  padding-left: 50px;
 }
-/* line 33, ../../app/stylesheets/partials/layout.scss */
+/* line 69, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string {
   width: 100%;
   height: 32px;
 }
-/* line 37, ../../app/stylesheets/partials/layout.scss */
+/* line 73, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string ol.frets > li {
   position: relative;
   float: left;
@@ -113,22 +162,22 @@ h2 {
   border-top: 1px solid #ccc;
   border-left: 1px solid #ccc;
 }
-/* line 48, ../../app/stylesheets/partials/layout.scss */
+/* line 84, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string ol.frets > li ul > li input.fret {
   position: absolute;
   top: -7px;
   left: -29px;
   opacity: 0.3;
 }
-/* line 53, ../../app/stylesheets/partials/layout.scss */
+/* line 89, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string ol.frets > li ul > li input.fret:checked, #fretboard > li.string ol.frets > li ul > li input.fret:hover {
   opacity: 1;
 }
-/* line 57, ../../app/stylesheets/partials/layout.scss */
+/* line 93, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string ol.frets > li ul > li label {
   color: #fff;
 }
-/* line 60, ../../app/stylesheets/partials/layout.scss */
+/* line 96, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string ol.frets > li ul > li span.finger {
   display: block;
   position: absolute;
@@ -136,20 +185,20 @@ h2 {
   top: -4px;
   font-size: 50px;
 }
-/* line 68, ../../app/stylesheets/partials/layout.scss */
+/* line 104, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string ol.frets > li ul > li.hidden {
   display: none;
 }
-/* line 73, ../../app/stylesheets/partials/layout.scss */
+/* line 109, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string ol.frets > li:first-child ul li span.finger {
   top: -6px;
   left: -8px;
 }
-/* line 77, ../../app/stylesheets/partials/layout.scss */
+/* line 113, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string ol.frets > li:first-child input.fret {
   left: -16px;
 }
-/* line 86, ../../app/stylesheets/partials/layout.scss */
+/* line 122, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string:nth-child(3) ol.frets > li:nth-child(3):before, #fretboard > li.string:nth-child(3) ol.frets > li:nth-child(7):before, #fretboard > li.string:nth-child(3) ol.frets > li:nth-child(10):before {
   margin: 15px;
   content: "•";
@@ -157,7 +206,7 @@ h2 {
   line-height: 35px;
   color: #ccc;
 }
-/* line 99, ../../app/stylesheets/partials/layout.scss */
+/* line 135, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string:nth-child(1) ol.frets > li:nth-child(5):before, #fretboard > li.string:nth-child(1) ol.frets > li:nth-child(12):before, #fretboard > li.string:nth-child(5) ol.frets > li:nth-child(5):before, #fretboard > li.string:nth-child(5) ol.frets > li:nth-child(12):before {
   margin: 15px;
   content: "•";
@@ -165,7 +214,7 @@ h2 {
   line-height: 35px;
   color: #ccc;
 }
-/* line 110, ../../app/stylesheets/partials/layout.scss */
+/* line 146, ../../app/stylesheets/partials/layout.scss */
 #fretboard > li.string:last-child ol.frets > li {
   padding-left: 1px;
   border-left: 0;

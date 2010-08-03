@@ -1,4 +1,14 @@
 
+$green: #629632;
+$light_green: #b8dc96;
+$green_offset: #f4faef;
+$dark_green: #38561d;
+
+@mixin rounded($radius: 10px) {
+ -moz-border-radius: $radius;
+ -webkit-border-radius: $radius;
+ border-radius: $radius;
+}
 
 @mixin application {
   

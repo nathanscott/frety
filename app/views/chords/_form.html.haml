@@ -1,10 +1,5 @@
 = semantic_form_for @chord do |form|
-  -if @chord.errors.any?
-    #errorExplanation
-      %h2= "#{pluralize(@chord.errors.count, "error")} prohibited this chord from being saved:"
-      %ul
-        - @chord.errors.full_messages.each do |msg|
-          %li= msg
+
   %ol#fretboard
     - (1..6).each do |string|
       %li.string

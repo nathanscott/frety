@@ -9,9 +9,11 @@
   = csrf_meta_tag
 
 %body
-  
-  %h1#logo
-    = link_to "Frety", root_path
+  #header
+    %h1#logo
+      = link_to "Frety", root_path
+    %p
+      A simple tool for sharing your guitar chords.
   #container
     = yield
 

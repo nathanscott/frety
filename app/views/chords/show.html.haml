@@ -10,3 +10,5 @@
               %li
                 - if @chord.notes.group_by{ |note| [note.fret, note.string] }.include? [fret, string]
                   %span.finger= fret==0 ? "◦" : "•"
+
+= link_to "Make one", root_path, :class => "make_one"
