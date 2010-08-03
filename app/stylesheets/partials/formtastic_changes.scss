@@ -1,0 +1,90 @@
+@mixin formtastic_changes {
+  form.formtastic {
+    font-size: 13px;
+    line-height: 1;
+    > fieldset {
+      width: 80%
+    }
+    &.project_search input {
+      padding: 4px;
+      width: 95%;
+      border: 1px solid grey;
+    }
+    fieldset {
+      display: block;
+      > ol, .tbody > ol {
+        > li {
+          display: block;
+          &.string input, &.password input, &.text textarea {
+            padding: 4px;
+            max-width: 70%;
+            overflow: auto;
+            border: 1px solid grey;
+          }
+          &.commit input[type='submit'] {
+            @extend .button
+          }
+          &.halved {
+            label {
+              width: 50%;
+            }
+          }
+          &.boolean.heading {
+            font-weight: bold;
+            padding: 0 0 10px;
+            label {
+              padding: 0;
+              font-size: 1.2em;
+            }
+          }
+          input.date_pick {
+            width: 90px;
+          }
+          input[name*="sid"] {
+            width: 70px;
+          }
+        }
+      }
+      &.buttons {
+        display: block;
+      }
+      &.dual_column {
+        width: 90%;
+        li {
+          float: left;
+          width: 50%;
+        }
+      }
+      &.table {
+        display: table;
+        margin-bottom: 15px;
+        width: 100%;
+        .tbody {
+          display: table-row-group;
+        }
+        ol {
+          display: table-row;
+          width: 100%;
+          min-height: 24px;
+          li {
+            display: table-cell;
+            padding: 4px; 
+
+            input {
+              width: 100%;
+            }
+            &.sid {
+              width: 7%;
+            }
+            &.labour {
+              width: 18%;
+            }
+          }
+          &.head {
+            color: #fff; 
+          }
+        }
+      }
+    }
+  }  
+}

@@ -1,0 +1,20 @@
+!!!
+%head
+  %title
+    Frety
+  = stylesheet_link_tag 'screen.css', :media => 'screen, projection'
+  = stylesheet_link_tag 'print.css', :media => 'print'
+  /[if IE]
+    = stylesheet_link_tag 'ie.css', :media => 'screen, projection'
+  = csrf_meta_tag
+
+%body
+  
+  %h1#logo
+    = link_to "Frety", root_path
+  #container
+    = yield
+
+  = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"
+  :javascript
+    $("label").attr({for: ""})

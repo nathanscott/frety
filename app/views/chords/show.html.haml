@@ -1,0 +1,12 @@
+%h2= @chord.name
+
+%ol#fretboard
+  - (1..6).each do |string|
+    %li.string
+      %ol.frets
+        - (0..12).each do |fret|
+          %li
+            %ul
+              %li
+                - if @chord.notes.group_by{ |note| [note.fret, note.string] }.include? [fret, string]
+                  %span.finger= fret==0 ? "◦" : "•"

@@ -1,0 +1,23 @@
+= semantic_form_for @chord do |form|
+  -if @chord.errors.any?
+    #errorExplanation
+      %h2= "#{pluralize(@chord.errors.count, "error")} prohibited this chord from being saved:"
+      %ul
+        - @chord.errors.full_messages.each do |msg|
+          %li= msg
+  %ol#fretboard
+    - (1..6).each do |string|
+      %li.string
+        %ol.frets
+          - (0..12).each do |fret|
+            %li
+              %ul
+                = semantic_fields_for "chord[notes_attributes][]", Note.new(:fret => fret, :string => string) do |note_form|
+                  = note_form.input :on, :as => :boolean, :label => "#{fret} fret", :class => "fret"
+                  = note_form.input :fret, :as => :hidden
+                  = note_form.input :string, :as => :hidden
+
+  - form.inputs do
+    = form.input :name, :label => "Name your chord"
+  - form.buttons do
+    = form.commit_button "Save"

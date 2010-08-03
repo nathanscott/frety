@@ -1,0 +1,121 @@
+@mixin layout {
+  
+  body {
+    margin: 20px auto;
+    width: 660px;
+    font: 13px/15px Helvetica, Arial, sans-serif;
+  }
+  
+  h1 {
+    &#logo {
+      display: block;
+      padding: 10px 6px;
+      background: #ccc;
+      a {
+        color: white;
+        text-decoration: none;
+        font: 26px/28px Georgia, serif;
+      }
+    }
+  }
+  
+  h2 {
+    font-size: 1.6em;
+  }
+  
+  #container {
+    padding: 20px 0;
+  }
+  
+  #fretboard {
+    margin: 40px 0;
+    padding-left: 60px;
+    > li.string {
+      width: 100%;
+      height: 32px;
+      ol.frets {
+        > li {
+          position: relative;
+          float: left;
+          margin: 0;
+          padding: 0;
+          width: 40px;
+          height: 30px;
+          border-top: 1px solid #ccc;
+          border-left: 1px solid #ccc;
+          ul {
+            > li {
+              input.fret {
+                position: absolute;
+                top: -9px;
+                left: -30px;
+                opacity: 0.3;
+                &:checked, &:hover {
+                  opacity: 1;                  
+                }
+              }
+              label {
+                color: #fff;
+              }
+              span.finger {
+                display: block;
+                position: absolute;
+                left: -29px;
+                top: -4px;
+                font-size: 50px;
+              }
+            }
+            > li.hidden {
+              display: none;
+            }
+          }
+          &:first-child {
+            ul li span.finger {
+              top: -6px;
+              left: -8px;
+            }
+            input.fret {
+              left: -16px;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        ol.frets > li {
+          &:nth-child(3), &:nth-child(7), &:nth-child(10) {
+            &:before {
+              margin: 15px;
+              content: "•";
+              font-size: 30px;
+              line-height: 35px;
+              color: #ccc;
+            }
+          }
+        }
+      }
+      &:nth-child(1), &:nth-child(5) {
+        ol.frets > li {
+          &:nth-child(5), &:nth-child(12) {
+            &:before {
+              margin: 15px;
+              content: "•";
+              font-size: 30px;
+              line-height: 35px;
+              color: #ccc;
+            }
+          }
+        }
+      }
+      &:last-child {
+        ol.frets > li {
+          padding-left: 1px;
+          border-left: 0;
+          border-right: 0;
+
+        }
+      }
+    }
+  }
+  
+  
+}
