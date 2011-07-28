@@ -134,6 +134,7 @@
         ol.frets > li {
           &:nth-child(5), &:nth-child(12) {
             &:before {
+              position: absolute;
               margin: 15px;
               content: "•";
               font-size: 30px;
